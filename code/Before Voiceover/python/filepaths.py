@@ -1,0 +1,5 @@
+token_path = '/home/tyler/Desktop/youtubeProject/code/Before Voiceover/pythonOriginalScripts/token.json'
+credentials_path = '/home/tyler/Desktop/youtubeProject/code/Before Voiceover/pythonOriginalScripts/credentials.json'
+directory_path = '/home/tyler/Desktop/youtubeProject/code/Before Voiceover/python'
+output_dir = '/home/tyler/Desktop/youtubeProject/nonCode/txt files/'
+local_folder_path = '/home/tyler/Desktop/youtubeProject/code/Before Voiceover/python/'

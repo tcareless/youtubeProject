@@ -7,18 +7,17 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-
-from code.filepaths.filepaths import token_path, credentials_path, local_folder_path
+from code.filepaths.filepaths import token_path, credentials_path, voiceover_output_dir  # Import voiceover_output_dir
 
 
 class AudioDownloader:
 
     SCOPES = ['https://www.googleapis.com/auth/drive']
 
-    def __init__(self, token_path, credentials_path, local_folder_path):
+    def __init__(self, token_path, credentials_path, voiceover_output_dir):
         self.token_path = token_path
         self.credentials_path = credentials_path
-        self.local_folder_path = local_folder_path
+        self.voiceover_output_dir = voiceover_output_dir  # Updated this line
 
     def authenticate(self):
         creds = None
@@ -57,7 +56,7 @@ class AudioDownloader:
         
         for item in items:
             request = service.files().get_media(fileId=item['id'])
-            fh = io.FileIO(os.path.join(self.local_folder_path, item['name']), 'wb')
+            fh = io.FileIO(os.path.join(self.voiceover_output_dir, item['name']), 'wb')  # Updated this line
             downloader = MediaIoBaseDownload(fh, request)
             done = False
             while done is False:
@@ -68,7 +67,9 @@ class AudioDownloader:
             service.files().delete(fileId=item['id']).execute()
             print(f'Deleted {item["name"]}')
 
-# Update the __main__ section to use the imported file path variables
+# Update the __main__ section to use the imported voiceover_output_dir variable
 if __name__ == '__main__':
-    audio_downloader = AudioDownloader(token_path, credentials_path, local_folder_path)
+    audio_downloader = AudioDownloader(token_path, credentials_path, voiceover_output_dir)  # Updated this line
     audio_downloader.download_audio()
+
+

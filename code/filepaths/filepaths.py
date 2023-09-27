@@ -9,3 +9,4 @@ local_folder_path = '/home/tyler/Desktop/youtubeProject/code/Before_Voiceover/py
 background_music_path = '/home/tyler/Desktop/youtubeProject/nonCode/background.mp3'  # Path to the background music file to be used in auto-building videos
 video_output_dir = '/home/tyler/Desktop/youtubeProject/nonCode/outputtedVideos/'  # Path to the directory where finished videos will be outputted
 voiceover_output_dir = '/home/tyler/Desktop/youtubeProject/code/After_Voiceover/'  # Updated path
+thumbnail_dir = '/home/tyler/Desktop/youtubeProject/nonCode/thumbnails/'  # Path to the directory where thumbnails are stored

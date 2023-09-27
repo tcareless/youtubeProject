@@ -8,8 +8,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 
-# Import file path variables from filepaths.py
-from filepaths import token_path, credentials_path, local_folder_path
+from code.filepaths.filepaths import token_path, credentials_path, local_folder_path
+
 
 class AudioDownloader:
 

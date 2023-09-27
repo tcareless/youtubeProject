@@ -1,7 +1,9 @@
-from audioDownloaderclass import AudioDownloader
-from Transcribeclass import Transcribe
-from getTokenclass import GetToken
-import filepaths
+from code.filepaths.filepaths import token_path, credentials_path, local_folder_path, directory_path, output_dir
+
+from code.Before_Voiceover.python.audioDownloaderclass import AudioDownloader
+from code.Before_Voiceover.python.getTokenclass import GetToken
+from code.Before_Voiceover.python.Transcribeclass import Transcribe
+
 
 def main():
     while True:
@@ -16,15 +18,15 @@ def main():
 
         if choice == '1':
             audio_downloader = AudioDownloader(
-                filepaths.token_path, filepaths.credentials_path, filepaths.local_folder_path)
+                token_path, credentials_path, local_folder_path)  # Updated
             audio_downloader.download_audio()
         elif choice == '2':
             transcriber = Transcribe(
-                filepaths.directory_path, filepaths.output_dir)
+                directory_path, output_dir)  # You need to ensure directory_path and output_dir are defined
             transcriber.transcribe_files()
         elif choice == '3':
             token_getter = GetToken(
-                filepaths.token_path, filepaths.credentials_path)
+                token_path, credentials_path)  # Updated
             token_getter.obtain_token()
         elif choice == '4':
             break

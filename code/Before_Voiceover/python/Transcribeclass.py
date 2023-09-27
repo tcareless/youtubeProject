@@ -3,7 +3,7 @@ import os
 import subprocess
 
 # Import file path variables from filepaths.py
-from filepaths import directory_path, output_dir
+from code.filepaths.filepaths import directory_path, output_dir
 
 # Define the Transcribe class
 class Transcribe:

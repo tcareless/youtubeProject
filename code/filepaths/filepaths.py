@@ -10,3 +10,12 @@ background_music_path = '/home/tyler/Desktop/youtubeProject/nonCode/background.m
 video_output_dir = '/home/tyler/Desktop/youtubeProject/nonCode/outputtedVideos/'  # Path to the directory where finished videos will be outputted
 voiceover_output_dir = '/home/tyler/Desktop/youtubeProject/code/After_Voiceover/'  # Updated path
 thumbnail_dir = '/home/tyler/Desktop/youtubeProject/nonCode/thumbnails/'  # Path to the directory where thumbnails are stored
+
+# New file paths for token.json and client_secrets.json
+token_path = '/home/tyler/Desktop/youtubeProject/token.json'  # Path to the token.json file for YouTube API authentication
+client_secrets_path = '/home/tyler/Desktop/youtubeProject/code/After_Voiceover/python/client_secrets.json'  # Path to the client_secrets.json file for YouTube API authentication
+
+
+# BackupCleanup paths
+source_dir = "/home/tyler/Desktop/youtubeProject/nonCode/outputtedVideos/"
+backup_dir = "/home/tyler/Desktop/youtubeProject/nonCode/pastVideos/"
